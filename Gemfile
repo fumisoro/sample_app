@@ -5,6 +5,8 @@ ruby '2.0.0'
 ENV['NOKOGIRI_USE_SYSTEM_LIBRARIES'] = 'YES'
 
 gem 'rails', '4.0.5'
+gem 'bootstrap-sass', '2.3.2.0'
+gem 'sprockets', '2.11.0'
 
 gem 'nokogiri', '1.6.6.2'
 
