@@ -3,5 +3,19 @@
   <div class="field">
   	<%= f.text_area :content, placeholder: "Compose new micropost..." %>
   </div>
-  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+  <div class="row">
+    <%= f.submit "Post", class: "btn btn-large btn-primary span2" %>
+    <div id="rest" class="span1"></div>
+  </div>
+  <script type="text/javascript">
+    var maxCharactersNum = 140;
+    var content = document.getElementById("micropost_content");
+    var restCharacter = document.getElementById("rest");
+    restCharacter.innerHTML = maxCharactersNum;
+    content.addEventListener('keyup', keyUpEvent, false);
+    function keyUpEvent() {
+      var length = content.value.length;
+      restCharacter.innerHTML = (maxCharactersNum - length); 
+    };
+  </script>
 <% end %>
